@@ -1,84 +1,63 @@
-live deploye link:https://backend-lab-report-1.onrender.com
- 
-# Lab 01: Node.js and Express Server
+# Backend Development Lab Reports
 
-## Student Details
+Repository containing backend lab assignments and implementations using Node.js, Express.js, and SQLite.
 
-- **Name:** T.Neeraj Kumar Reddy
+## Project Structure
+
+```text
+├── README.md
+├── .gitignore
+│
+├── lab-01/
+│   ├── README.md
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── app.js
+│   ├── server-http.js
+│   └── screenshots/
+│
+└── lab-02/
+    ├── README.md
+    ├── package.json
+    ├── package-lock.json
+    ├── app.js
+    ├── setup-db.js
+    ├── books.db
+    └── screenshots/
+```
+
+---
+
+- **Student Name:** T.Neeraj Kumar Reddy
 - **Registration Number:** 252U1R8096
 - **Section:** CSE-QE-2B
 
-## Objective
+## Labs Overview
 
-To create a basic HTTP server using Node.js and build a web server using Express.js with multiple routes and proper HTTP status codes.
+### [Lab 01: Node.js & Express Server](./lab-01)
+- **Live Deployment:** https://backend-lab-report-1.onrender.com
+- **Objective:** Build a plain HTTP server using Node.js's built-in `http` module and an Express.js server handling multiple routes with proper HTTP status codes.
+- **Key Files:**
+  - `server-http.js`: Core Node.js HTTP server running on port 3000.
+  - `app.js`: Express.js server with routes (`/`, `/about`, `/time`, 404 handler).
+- **Run Instructions:**
+  ```bash
+  cd lab-01
+  npm install
+  node server-http.js   # Run native Node.js HTTP server
+  node app.js           # Run Express.js server
+  ```
 
-## Technologies Used
-
-- Node.js
-- Express.js
-- JavaScript
-- Visual Studio Code
-
-## Installation and Setup
-
-1. Initialize the Node.js project:
-
-   ```bash
-   npm init -y
-   ```
-
-2. Install Express:
-
-   ```bash
-   npm install express
-   ```
-
-## How to Run
-
-### Node.js HTTP Server
-
-Run the following command:
-
-```bash
-node plain-server.js
-```
-
-### Express Server
-
-Run the following command:
-
-```bash
-node app.js
-```
-
-## API Endpoints
-
-- **GET /** — Displays the welcome message.
-- **GET /about** — Returns student name and section as JSON.
-- **GET /time** — Returns the current date and time.
-- **GET /invalid** — Returns a 404 Page Not Found response.
-
-## Screenshots
-
-### Home Page
-
-![Home Page](screenshots/home.png)
-
-### About Page
-
-![About Page](screenshots/about.png)
-
-### Time Page
-
-![Time Page](screenshots/time.png)
-
-### Not Found Page
-
-![Not Found Page](screenshots/invalid.png)
-
-## Notes
-
-- `package.json` contains project information and dependencies.
-- `node_modules` contains the installed packages.
-- The Node.js built-in `http` module is used for the plain server.
-- Express.js is used to handle routes and HTTP responses.
+### [Lab 02: SQLite Database & CRUD Operations](./lab-02)
+- **Objective:** Connect an Express server to a persistent SQLite database (`books.db`) and expose full CRUD endpoints.
+- **Key Files:**
+  - `setup-db.js`: Database initialization script to create the `book` table and seed 10 sample records.
+  - `books.db`: SQLite database file storing the `book` records.
+  - `app.js`: Express application exposing CRUD REST endpoints (`GET /books/`, `GET /books/:bookId/`, `POST /books/`, `PUT /books/:bookId/`, `DELETE /books/:bookId/`).
+- **Run Instructions:**
+  ```bash
+  cd lab-02
+  npm install
+  node setup-db.js      # (Optional) Verify or initialize SQLite database
+  npm run dev           # Start Express server with nodemon
+  ```
