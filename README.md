@@ -16,13 +16,22 @@ Repository containing backend lab assignments and implementations using Node.js,
 │   ├── server-http.js
 │   └── screenshots/
 │
-└── lab-02/
+├── lab-02/
+│   ├── README.md
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── app.js
+│   ├── setup-db.js
+│   ├── books.db
+│   └── screenshots/
+│
+└── lab-03/
     ├── README.md
     ├── package.json
     ├── package-lock.json
     ├── app.js
-    ├── setup-db.js
-    ├── books.db
+    ├── database/
+    │   └── books.db
     └── screenshots/
 ```
 
@@ -60,4 +69,17 @@ Repository containing backend lab assignments and implementations using Node.js,
   npm install
   node setup-db.js      # (Optional) Verify or initialize SQLite database
   npm run dev           # Start Express server with nodemon
+  ```
+
+### [Lab 03: REST API, Query Parameters & Validation](./lab-03)
+- **Objective:** Extend the SQLite books API with search, sorting, pagination, price filtering, validation, and correct HTTP status codes.
+- **Key Files:**
+  - `app.js`: Express REST API with CRUD routes and query parameters.
+  - `database/books.db`: SQLite database containing the sample books.
+  - `README.md`: Setup instructions, endpoint documentation, and screenshots.
+- **Run Instructions:**
+  ```bash
+  cd lab-03
+  npm install
+  npm run dev
   ```
