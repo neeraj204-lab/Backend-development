@@ -1,4 +1,4 @@
-# Lab 3: REST API, Query Parameters, Validation and Debugging
+http://localhost:3000/books# Lab 3: REST API, Query Parameters, Validation and Debugging
 
 **Name:** T. Neeraj Kumar Reddy  
 **Registration Number:** 252U1R8096  
@@ -128,15 +128,7 @@ Error responses use a consistent JSON message format.
 
 ![Price filtering](screenshots/price-filter.png)
 
-### 5. Add a book successfully
-
-![POST book](screenshots/post-book-success.png)
-
-### 6. Update a book
-
-![PUT book](screenshots/put-book-success.png)
-
-### 7. SQLite database records
+### 5. SQLite database records
 
 ![SQLite database](screenshots/sqlite-database.png)
 
