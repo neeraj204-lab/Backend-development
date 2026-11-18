@@ -1,4 +1,4 @@
-http://localhost:3000/books# Lab 3: REST API, Query Parameters, Validation and Debugging
+ Lab 3: REST API, Query Parameters, Validation and Debugging
 
 **Name:** T. Neeraj Kumar Reddy  
 **Registration Number:** 252U1R8096  
